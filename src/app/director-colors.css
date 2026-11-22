@@ -1,0 +1,71 @@
+/* Keep the repaired layout and copy; restore only the original red/blue palette. */
+.app-shell.director-shell {
+  --paper: #f2f1eb;
+  --white: #fbfaf6;
+  --ink: #171717;
+  --muted: #746f70;
+  --red: #e51c46;
+  --red-line: rgba(229, 28, 70, .52);
+  --red-soft: rgba(229, 28, 70, .11);
+  --blue: #075f99;
+}
+
+.director-shell .hero {
+  background:
+    radial-gradient(ellipse 44% 32% at 24% 76%, rgba(255,255,255,.95), rgba(226,239,242,.78) 48%, transparent 70%),
+    radial-gradient(ellipse 50% 30% at 78% 70%, rgba(255,255,255,.96), rgba(220,235,239,.72) 54%, transparent 74%),
+    linear-gradient(180deg, var(--blue) 0 30%, #0873ab 38%, #d8e8ea 70%, #edf0ec 100%);
+}
+
+.director-shell .hero-meta,
+.director-shell .hero h1,
+.director-shell .hero > p,
+.director-shell .flow-line {
+  color: var(--red);
+}
+
+.director-shell .hero-meta { border-color: var(--red-line); }
+.director-shell .hero h1 { text-shadow: 0 1px 1px transparent; }
+.director-shell .eyebrow { background-color: rgba(242,241,235,.84); }
+.director-shell .launch-button:hover { background-color: #c5163d; }
+.director-shell .model-state { color: var(--red); }
+.director-shell .model-state span { background-color: var(--red); }
+
+.director-shell .mode-notice,
+.director-shell .notice,
+.director-shell .notice.stale {
+  color: var(--red);
+  border-color: var(--red-line);
+  background-color: var(--red-soft);
+}
+
+.director-shell .mode-notice strong,
+.director-shell .card-heading p,
+.director-shell .form-grid label > span,
+.director-shell .analysis-grid label > span,
+.director-shell .timeline label > span,
+.director-shell .brief-field > span {
+  color: var(--red);
+}
+
+.director-shell .drop-zone {
+  background-color: rgba(251,250,246,.32);
+  border-color: var(--red-line);
+}
+.director-shell .drop-zone:hover,
+.director-shell .drop-zone:focus-within { background-color: var(--red-soft); border-color: var(--red); }
+.director-shell .preview-card { border-color: var(--red-line); }
+.director-shell .preview-card > button { border-color: var(--red); }
+.director-shell .preview-card img,
+.director-shell .preview-card video { background-color: var(--paper); }
+.director-shell input,
+.director-shell textarea { border-color: var(--red-line); background-color: rgba(251,250,246,.44); }
+.director-shell input:focus,
+.director-shell textarea:focus { border-color: var(--red); background-color: var(--white); }
+.director-shell input::placeholder,
+.director-shell textarea::placeholder { color: #9a9293; }
+.director-shell .result-panel { border-color: var(--red-line); background-color: rgba(251,250,246,.28); }
+.director-shell .source-badge.ai { color: var(--white); border-color: var(--red); background-color: var(--red); }
+.director-shell .source-badge.fallback { color: var(--red); border-color: var(--red-line); background-color: var(--red-soft); }
+.director-shell .status-message:not(:empty) { color: var(--red); border-color: var(--red); background-color: var(--paper); }
+.director-shell .error-banner { color: var(--red); border-color: var(--red); background-color: var(--paper); }
